@@ -7,3 +7,6 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 1. Color hex: #232436
 2. Font JetBrainsMono Nerd Font. Source: https://www.nerdfonts.com/font-downloads
+
+# Grep library for string search
+- https://github.com/BurntSushi/ripgrep#installation
