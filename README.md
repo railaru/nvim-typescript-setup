@@ -22,6 +22,7 @@
 ## Customization
 1. Color hex: #232436
 2. Font JetBrainsMono Nerd Font. Source: https://www.nerdfonts.com/font-downloads
+3. If you're using iTerm on Mac, you can reduce opacity and add some background blur for a translucent effect.
 
 ## Cheat sheet
 
