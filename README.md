@@ -59,7 +59,6 @@ You can combine commands. For example:
 
 
 ## Resources & Further reading:
-- https://dev.to/craftzdog/my-neovim-setup-for-react-typescript-tailwind-css-etc-58fb
 - https://www.lazyvim.org/installation
 - https://www.youtube.com/watch?v=N93cTbtLCIM
 - https://github.com/jackMort/ChatGPT.nvim
