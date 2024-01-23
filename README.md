@@ -1,4 +1,5 @@
-![Image description](https://raw.githubusercontent.com/railaru/modern-nvim-setup/main/img/preview.png)
+[[https://github.com/railaru/modern-nvim-setup/blob/main/img/preview.png|alt=preview]]
+
 
 # Modern Neovim setup
 - A full-featured Neovim setup for modern web development.
@@ -11,10 +12,15 @@
 - Fuzzy search (Telescope)
 - File tree
 
+## Getting started
+
+1. Make sure you have Neo Vim and Git installed on your system.
+2. Clone this repo: `git clone https://github.com/railaru/modern-nvim-setup/tree/main ~/.config/nvim`
+3. Start Noe Vim in any directory on your system: `nvim`
+
 ## Customization
 1. Color hex: #232436
 2. Font JetBrainsMono Nerd Font. Source: https://www.nerdfonts.com/font-downloads
-
 
 ## Cheat sheet
 
