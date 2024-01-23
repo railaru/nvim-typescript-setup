@@ -1,4 +1,5 @@
-[[https://github.com/railaru/modern-nvim-setup/blob/main/img/preview.png|alt=preview]]
+![Preview](https://raw.githubusercontent.com/railaru/modern-nvim-setup/main/img/preview.png)
+
 
 
 # Modern Neovim setup
