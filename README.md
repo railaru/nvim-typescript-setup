@@ -1,5 +1,4 @@
-[[https://github.com/railaru/modern-nvim-setup/blob/main/img/preview.png|alt=preview]]
-
+![Image description](https://raw.githubusercontent.com/railaru/modern-nvim-setup/main/img/preview.png)
 
 # Modern Neovim setup
 - A full-featured Neovim setup for modern web development.
