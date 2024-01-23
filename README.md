@@ -1,3 +1,5 @@
+[[https://github.com/railaru/modern-nvim-setup/blob/main/img/preview.png|alt=preview]]
+
 
 # Modern Neovim setup
 - A full-featured Neovim setup for modern web development.
