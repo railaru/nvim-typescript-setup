@@ -23,7 +23,7 @@
 | Title | Description |
 |--|--|
 | Color hex | #232436 |
-| Font | JetBrainsMono Nerd Font. Source: https://www.nerdfonts.com/font-downloads |
+| Font | JetBrainsMono Nerd Font. Source: https://www.nerdfonts.com/font-downloads. I recommend one of the "nerdfonts" fonts, because the default system fonts often don't support file and folder icons. |
 | Translucent effect | Je If you're using iTerm on Mac, you can reduce opacity and add some background blur for a translucent effect. |
 
 ## Cheat sheet
