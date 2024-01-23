@@ -16,7 +16,7 @@
 ## Getting started
 
 1. Make sure you have Neo Vim and Git installed on your system.
-2. Clone this repo: `git clone https://github.com/railaru/modern-nvim-setup/tree/main ~/.config/nvim`
+2. Clone this repo: `git clone https://github.com/railaru/modern-nvim-setup ~/.config/nvim`
 3. Start Neo Vim in any directory on your system: `nvim`
 
 ## Customization
