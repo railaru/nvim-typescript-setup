@@ -59,12 +59,21 @@ You can combine commands. For example:
 - `p` paste the selected region
 - `shift + v`, "visual line mode", copy the region with the lines, not just the text.
 
-💡 You can copy a region, select a new region and it will delete and add the copied region to the selection.
+💡 You can copy a region and select a new region, and it will delete and add the copied area to the selection.
 
 💡 Yanking also works with numbers, for example `y + 5 + j` (copy 5 lines to bottom)
 
 ## Custom keymaps
-- `shift` + `f` find files using the Telescope plugin. Simila to double shift in JetBrains IDEs.
+- `shift` + `f` find files using the Telescope plugin. Similar to the double shift in JetBrains IDEs.
+
+## Neovim file Tree
+- `up`, `down` navigate between files.
+- `enter` select a file.
+- `c` copy a file and make a copy with a new name.
+-  `r` rename a file
+-  `a` add a new file in the folder
+- `space` + `e` toggle file tree
+
 
 ## Prepending branch name for git commit messages
 
