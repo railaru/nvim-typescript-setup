@@ -63,6 +63,9 @@ You can combine commands. For example:
 
 💡 Yanking also works with numbers, for example `y + 5 + j` (copy 5 lines to bottom)
 
+## Custom keymaps
+- `shift` + `f` find files using the Telescope plugin. Simila to double shift in JetBrains IDEs.
+
 ## Prepending branch name for git commit messages
 
 To automatically prepend the project and task number from your branch name into your commit messages, you can utilize a Git hook, specifically the `prepare-commit-msg` hook. This hook allows you to manipulate the commit message before it is finalized.
