@@ -62,7 +62,6 @@ You can combine commands. For example:
 
 ## Prepending branch name for git commit messages
 
-
 To automatically prepend the project and task number from your branch name into your commit messages, you can utilize a Git hook, specifically the `prepare-commit-msg` hook. This hook allows you to manipulate the commit message before it is finalized.
 
 #### End result:
