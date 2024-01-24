@@ -33,11 +33,12 @@ Quick reminder for nvim/vim commands.
 ### Commands
 
 - `:w` to save
-- `gg` go to the top of the file instantly
-- `gc` comment out the selected area. Wortk with JSX/TSX
+- `g+g` go to the top of the file instantly
+- `g+c` comment out the selected area. Wortk with JSX/TSX
 - `ctrl + ]` to go back and forth between the implementation and definition.
 - `shift + :`  go to enter a command mode
 - `s` to search for text within the same file
+- `0` go to start of a line
 - `~/.config/nvim`
 
 You can combine commands. For example:
