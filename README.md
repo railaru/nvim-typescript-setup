@@ -39,6 +39,7 @@ Quick reminder for nvim/vim commands.
 - `shift + :`  go to enter a command mode
 - `s` to search for text within the same file
 - `0` go to start of a line
+- `shift` + `]` or `[` jump between empty lines
 - `~/.config/nvim`
 
 You can combine commands. For example:
