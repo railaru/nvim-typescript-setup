@@ -33,6 +33,8 @@ Quick reminder for nvim/vim commands.
 ### Commands
 
 - `:w` to save
+- `u` undo
+- `ctrl` + `r` redo
 - `g+g` go to the top of the file instantly
 - `g+c` comment out the selected area. Wortk with JSX/TSX
 - `ctrl + ]` to go back and forth between the implementation and definition.
