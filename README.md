@@ -39,6 +39,8 @@ Quick reminder for nvim/vim commands.
 - `g+c` comment out the selected area. Wortk with JSX/TSX
 - `ctrl + ]` to go back and forth between the implementation and definition.
 - `shift + :`  go to enter a command mode
+- `shift + h`  go to previous editor tab
+- `shift + l`  go to next editor tab
 - `s` to search for text within the same file
 - `0` go to start of a line
 - `shift` + `]` or `[` jump between empty lines
