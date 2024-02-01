@@ -41,6 +41,8 @@ Quick reminder for nvim/vim commands.
 - `shift + :`  go to enter a command mode
 - `shift + h`  go to previous editor tab
 - `shift + l`  go to next editor tab
+- `shift + >`  indent by a tab
+- `shift + <`  remove indent by a tab
 - `s` to search for text within the same file
 - `0` go to start of a line
 - `shift` + `]` or `[` jump between empty lines
