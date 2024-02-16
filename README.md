@@ -49,6 +49,7 @@ Quick reminder for nvim/vim commands.
 - `0` go to start of a line
 - `shift` + `]` or `[` jump between empty lines
 - `~/.config/nvim`
+- `:colorscheme github_dark` to change theme. Full list of themes https://github.com/projekt0n/github-nvim-theme?tab=readme-ov-file#supported-colorschemes--comparisons.
 
 You can combine commands. For example:
 - `d + 3 + j` will delete 3 lines below.
