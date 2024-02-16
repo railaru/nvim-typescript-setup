@@ -33,10 +33,18 @@ Quick reminder for nvim/vim commands.
 ### Commands
 
 - `:w` to save
+- `u` undo
+- `ctrl` + `r` redo
 - `g+g` go to the top of the file instantly
 - `g+c` comment out the selected area. Wortk with JSX/TSX
 - `ctrl + ]` to go back and forth between the implementation and definition.
 - `shift + :`  go to enter a command mode
+- `shift + h`  go to previous editor tab
+- `shift + l`  go to next editor tab
+- `shift + >`  indent by a tab
+- `shift + <`  remove indent by a tab
+- `shift + enter`  add an empty line
+- `:%s/oldterm/newterm/g` replace all matching references in the file. To use, first press `:` to open the command menu.
 - `s` to search for text within the same file
 - `0` go to start of a line
 - `shift` + `]` or `[` jump between empty lines
