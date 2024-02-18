@@ -43,7 +43,6 @@ Quick reminder for nvim/vim commands.
 - `shift + l`  go to next editor tab
 - `shift + >`  indent by a tab
 - `shift + <`  remove indent by a tab
-- `shift + enter`  add an empty line
 - `:%s/oldterm/newterm/g` replace all matching references in the file. To use, first press `:` to open the command menu.
 - `s` to search for text within the same file
 - `0` go to start of a line
