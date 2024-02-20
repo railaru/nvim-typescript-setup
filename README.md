@@ -36,7 +36,7 @@ Quick reminder for nvim/vim commands.
 - `u` undo
 - `ctrl` + `r` redo
 - `g+g` go to the top of the file instantly
-- `g+c` comment out the selected area. Wortk with JSX/TSX
+- `g+c` comment out the selected area. Works with JSX/TSX
 - `ctrl + ]` to go back and forth between the implementation and definition.
 - `shift + :`  go to enter a command mode
 - `shift + h`  go to previous editor tab
