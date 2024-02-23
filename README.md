@@ -46,6 +46,7 @@ Quick reminder for nvim/vim commands.
 - `:%s/oldterm/newterm/g` replace all matching references in the file. To use, first press `:` to open the command menu.
 - `s` to search for text within the same file
 - `0` go to start of a line
+- `o` go to the line blow and enable the edit mode
 - `shift` + `]` or `[` jump between empty lines
 - `~/.config/nvim`
 - `:colorscheme github_dark` to change theme. Full list of themes https://github.com/projekt0n/github-nvim-theme?tab=readme-ov-file#supported-colorschemes--comparisons.
