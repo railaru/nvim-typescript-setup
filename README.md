@@ -34,6 +34,7 @@ Quick reminder for nvim/vim commands.
 
 - `:w` to save
 - `u` undo
+- `K` hover over a symbol to see the type definition
 - `ctrl` + `r` redo
 - `g+g` go to the top of the file instantly
 - `g+c` comment out the selected area. Works with JSX/TSX
