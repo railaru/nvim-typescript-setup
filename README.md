@@ -49,6 +49,7 @@ Quick reminder for nvim/vim commands.
 - `0` go to start of a line
 - `o` go to the line blow and enable the edit mode
 - `shift` + `]` or `[` jump between empty lines
+- `ctrl` + `u` or `d` scroll one full page up or down
 - `~/.config/nvim`
 - `:colorscheme github_dark` to change theme. Full list of themes https://github.com/projekt0n/github-nvim-theme?tab=readme-ov-file#supported-colorschemes--comparisons.
 
