@@ -64,6 +64,10 @@ You can combine commands. For example:
 - vi{ select everything between {}
 - va( select everything between and around ()
 - vi{ select everything between and around {}
+- yi( yank everything between ()
+- yi{ yank everything between {}
+- ya( yank everything between and around ()
+- yi{ yank everything between and around {}
 
 ### Insert mode
 - `i` enable insert mode
