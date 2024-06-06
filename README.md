@@ -62,6 +62,8 @@ You can combine commands. For example:
 ### Horizontal navigation
 - vi( select everything between ()
 - vi{ select everything between {}
+- va( select everything between and around ()
+- vi{ select everything between and around {}
 
 ### Insert mode
 - `i` enable insert mode
