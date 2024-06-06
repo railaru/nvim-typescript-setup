@@ -68,7 +68,7 @@ You can combine commands. For example:
 - yi{ yank everything between {}
 - ya( yank everything between and around ()
 - yi{ yank everything between and around {}
-- viw select the whole word, regardless of where the pointer is.
+- viw select the whole word, regardless of where the pointer is. By the way, while selected clicking k or j will move the line up or down.
 
 ### Insert mode
 - `i` enable insert mode
