@@ -59,6 +59,10 @@ You can combine commands. For example:
 
 💡 Deleting also works as copying. You can delete a line and then type p to paste it somewhere else.
 
+### Horizontal navigation
+- vi( select everything between ()
+- vi{ select everything between {}
+
 ### Insert mode
 - `i` enable insert mode
 - `a` enable insert mode one letter forward.
