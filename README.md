@@ -65,7 +65,7 @@ You can combine commands. For example:
 - vi" select everything between ""
 - vi< select everything between <>
 - vi[ select everything between []
-
+-----
 - va( select everything between and around ()
 - va{ select everything between and around {}
 - va" select everything between and around ""
