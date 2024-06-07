@@ -62,12 +62,16 @@ You can combine commands. For example:
 ### Horizontal navigation
 - vi( select everything between ()
 - vi{ select everything between {}
+- vi" select everything between ""
 - va( select everything between and around ()
-- vi{ select everything between and around {}
+- va{ select everything between and around {}
+- va" select everything between and around ""
 - yi( yank everything between ()
 - yi{ yank everything between {}
+- yi" yank everything between ""
 - ya( yank everything between and around ()
-- yi{ yank everything between and around {}
+- ya{ yank everything between and around {}
+- ya" yank everything between and around ""
 - viw select the whole word, regardless of where the pointer is. By the way, while selected clicking shift + k or j will move the line up or down.
 
 ### Insert mode
