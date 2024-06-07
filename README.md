@@ -95,8 +95,8 @@ You can combine commands. For example:
 - `da"` delete everything between and around ""
 - `da<` delete everything between and around <>
 - `da[` delete everything between and around []
-
-- viw select the whole word, regardless of where the pointer is. By the way, while selected clicking shift + k or j will move the line up or down.
+-----
+- `viw` select the whole word, regardless of where the pointer is. By the way, while selected clicking shift + k or j will move the line up or down.
 
 ### Insert mode
 - `i` enable insert mode
