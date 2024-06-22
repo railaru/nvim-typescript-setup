@@ -46,7 +46,8 @@ Quick reminder for nvim/vim commands.
 - `shift + <`  remove indent by a tab
 - `:%s/oldterm/newterm/g` replace all matching references in the file. To use, first press `:` to open the command menu.
 - `s` to search for text within the same file
-- `0` go to start of a line
+- `0` go to start of a line horizontally
+- `$` go to end of a line horizontally
 - `o` go to the line blow and enable the edit mode
 - `shift` + `]` or `[` jump between empty lines
 - `ctrl` + `u` or `d` scroll one full page up or down
