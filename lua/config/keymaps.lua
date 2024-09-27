@@ -13,3 +13,6 @@ vim.api.nvim_set_keymap("n", "<D-s>", ":w<CR>", { noremap = true, silent = true 
 vim.api.nvim_set_keymap("n", "<S-t>", "<cmd>Trouble<CR>", { noremap = true, silent = true })
 -- shift + c = close trouble view
 vim.api.nvim_set_keymap("n", "<S-c>", "<cmd>TroubleClose<CR>", { noremap = true, silent = true })
+
+-- shift + k = hover over a symbol to see the type definition
+vim.api.nvim_set_keymap('n', '<S-K>', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })

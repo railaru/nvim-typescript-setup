@@ -1,15 +1,14 @@
 ![Preview](https://raw.githubusercontent.com/railaru/modern-nvim-setup/main/img/preview.png)
 
-
-
 # Modern Neovim setup
+
 - A full-featured Neovim setup for modern web development.
 
 ## Features:
+
 - Prettier
 - TypeScript
 - Eslint
-- GitHub Copilot
 - Fuzzy search (Telescope)
 - File tree
 
@@ -20,11 +19,12 @@
 3. Start Neo Vim in any directory on your system: `nvim`
 
 ## Customization
-| Title | Description |
-|--|--|
-| Color hex | #232436 |
-| Font | JetBrainsMono Nerd Font. Source: https://www.nerdfonts.com/font-downloads. I recommend one of the "nerdfonts" fonts, because the default system fonts often don't support file and folder icons. |
-| Translucent effect | If you're using iTerm on Mac, you can reduce opacity and add some background blur for a translucent effect. |
+
+| Title              | Description                                                                                                                                                                                      |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Color hex          | #232436                                                                                                                                                                                          |
+| Font               | JetBrainsMono Nerd Font. Source: https://www.nerdfonts.com/font-downloads. I recommend one of the "nerdfonts" fonts, because the default system fonts often don't support file and folder icons. |
+| Translucent effect | If you're using iTerm on Mac, you can reduce opacity and add some background blur for a translucent effect.                                                                                      |
 
 ## Cheat sheet
 
@@ -39,11 +39,11 @@ Quick reminder for nvim/vim commands.
 - `g+g` go to the top of the file instantly
 - `g+c` comment out the selected area. Works with JSX/TSX
 - `ctrl + ]` to go back and forth between the implementation and definition.
-- `shift + :`  go to enter a command mode
-- `shift + h`  go to previous editor tab
-- `shift + l`  go to next editor tab
-- `shift + >`  indent by a tab
-- `shift + <`  remove indent by a tab
+- `shift + :` go to enter a command mode
+- `shift + h` go to previous editor tab
+- `shift + l` go to next editor tab
+- `shift + >` indent by a tab
+- `shift + <` remove indent by a tab
 - `:%s/oldterm/newterm/g` replace all matching references in the file. To use, first press `:` to open the command menu.
 - `s` to search for text within the same file
 - `0` go to start of a line horizontally
@@ -55,56 +55,72 @@ Quick reminder for nvim/vim commands.
 - `:colorscheme github_dark` to change theme. Full list of themes https://github.com/projekt0n/github-nvim-theme?tab=readme-ov-file#supported-colorschemes--comparisons.
 
 You can combine commands. For example:
+
 - `d + 3 + j` will delete 3 lines below.
 - `d + w` will delete a word.
 
 💡 Deleting also works as copying. You can delete a line and then type p to paste it somewhere else.
 
 ### Horizontal navigation
+
 - `vi(` select everything between ()
 - `vi{` select everything between {}
 - `vi"` select everything between ""
 - `vi<` select everything between <>
 - `vi[` select everything between []
------
+
+---
+
 - `va(` select everything between and around ()
 - `va{` select everything between and around {}
 - `va"` select everything between and around ""
 - `va<` select everything between and around <>
 - `va[` select everything between and around []
------
+
+---
+
 - `yi(` yank everything between ()
 - `yi{` yank everything between {}
 - `yi"` yank everything between ""
 - `yi<` yank everything between <>
 - `yi[` yank everything between []
------
+
+---
+
 - `ya(` yank everything between and around ()
 - `ya{` yank everything between and around {}
 - `ya"` yank everything between and around ""
 - `ya<` yank everything between and around <>
 - `ya[` yank everything between and around []
------
+
+---
+
 - `di(` delete everything between ()
 - `di{` delete everything between {}
 - `di"` delete everything between ""
 - `di<` delete everything between <>
 - `di[` delete everything between []
------
+
+---
+
 - `da(` delete everything between and around ()
 - `da{` delete everything between and around {}
 - `da"` delete everything between and around ""
 - `da<` delete everything between and around <>
 - `da[` delete everything between and around []
------
+
+---
+
 - `viw` select the whole word, regardless of where the pointer is. By the way, while selected clicking shift + k or j will move the line up or down.
 
 ### Insert mode
+
 - `i` enable insert mode
 - `a` enable insert mode one letter forward.
 - `esc` or `ctrl + c` or `ctrl + [` leave insert mode
 
 ### Visual mode:
+
 - `v` enable visual mode
 - `y` "yank" copy selected region. You can also type yy to automatically select the line for yanking. This is a similar action as dragging a selected region with mouse.
 - `p` paste the selected region
@@ -115,16 +131,17 @@ You can combine commands. For example:
 💡 Yanking also works with numbers, for example `y + 5 + j` (copy 5 lines to bottom)
 
 ## Custom keymaps
+
 - `shift` + `f` find files using the Telescope plugin. Similar to the double shift in JetBrains IDEs.
 
 ## Neovim file Tree
+
 - `up`, `down` navigate between files.
 - `enter` select a file.
 - `c` copy a file and make a copy with a new name.
--  `r` rename a file
--  `a` add a new file in the folder
+- `r` rename a file
+- `a` add a new file in the folder
 - `space` + `e` toggle file tree
-
 
 ## Prepending branch name for git commit messages
 
@@ -132,12 +149,12 @@ To automatically prepend the project and task number from your branch name into 
 
 #### End result:
 
-| Branch name | Commit name |
-|--|--|
+| Branch name     | Commit name             |
+| --------------- | ----------------------- |
 | feature/ABC-123 | ABC-123: added a header |
 
-Here's a step-by-step guide to achieve this:
--
+## Here's a step-by-step guide to achieve this:
+
 1. **Locate Your Git Hooks Directory**:
    Every Git repository has a `.git/hooks` directory where you can place custom scripts to be executed at various stages of the Git workflow.
 
@@ -161,31 +178,34 @@ Here's a step-by-step guide to achieve this:
        # Prepend the extracted information to the commit message
        echo "${BASH_REMATCH[1]}: $(cat $COMMIT_MSG_FILE)" > $COMMIT_MSG_FILE
    fi
+   ```
 
 This script checks if the branch name matches the pattern and then prepends the project and task number (e.g., `ABC-287`) to the commit message.
 
-**Make the Script Executable**: 
+**Make the Script Executable**:
 After saving the script in `.git/hooks/prepare-commit-msg`, make it executable:
 
 `chmod +x .git/hooks/prepare-commit-msg`
 
-**Test Your Setup**: 
+**Test Your Setup**:
 Create a new commit on a branch that follows the naming convention. The script should automatically prepend the project and task number to your commit message.
-    
-**Project-Wide Setup (Optional)**: 
+
+**Project-Wide Setup (Optional)**:
 
 If you want this script to be used by anyone who clones the repository, you'll need to share it some other way, like committing it to the repository and having users set it up manually. Git doesn't clone the `.git/hooks` directory.
 
-
 ## Resources & Further reading:
+
 - https://www.lazyvim.org/installation
 - https://www.youtube.com/watch?v=N93cTbtLCIM
 - https://github.com/jackMort/ChatGPT.nvim
 
 ### AI commits
+
 - https://github.com/Nutlope/aicommits
 
 ### Grep library for string search
+
 - https://github.com/BurntSushi/ripgrep#installation
 
 ### 💤 Built on top of LazyVim
