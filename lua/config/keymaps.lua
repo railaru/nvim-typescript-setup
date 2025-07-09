@@ -16,3 +16,7 @@ vim.api.nvim_set_keymap("n", "<S-c>", "<cmd>TroubleClose<CR>", { noremap = true,
 
 -- shift + k = hover over a symbol to see the type definition
 vim.api.nvim_set_keymap('n', '<S-K>', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
+
+-- TypeScript auto-import keymaps
+vim.api.nvim_set_keymap('n', '<leader>ci', '<cmd>lua vim.lsp.buf.code_action({filter = function(action) return action.kind and action.kind:match("source%.addMissingImports") end, apply = true})<CR>', { noremap = true, silent = true, desc = "Add missing imports" })
+vim.api.nvim_set_keymap('n', '<leader>co', '<cmd>lua vim.lsp.buf.code_action({filter = function(action) return action.kind and action.kind:match("source%.organizeImports") end, apply = true})<CR>', { noremap = true, silent = true, desc = "Organize imports" })
