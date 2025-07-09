@@ -53,6 +53,7 @@ Quick reminder for nvim/vim commands.
 - `ctrl` + `u` or `d` scroll one full page up or down
 - `~/.config/nvim`
 - `:colorscheme github_dark` to change theme. Full list of themes https://github.com/projekt0n/github-nvim-theme?tab=readme-ov-file#supported-colorschemes--comparisons.
+- `zc`, `za` collapse/expand code sections
 
 You can combine commands. For example:
 
