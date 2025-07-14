@@ -20,3 +20,18 @@ vim.api.nvim_set_keymap('n', '<S-K>', '<cmd>lua vim.lsp.buf.hover()<CR>', { nore
 -- TypeScript auto-import keymaps
 vim.api.nvim_set_keymap('n', '<leader>ci', '<cmd>lua vim.lsp.buf.code_action({filter = function(action) return action.kind and action.kind:match("source%.addMissingImports") end, apply = true})<CR>', { noremap = true, silent = true, desc = "Add missing imports" })
 vim.api.nvim_set_keymap('n', '<leader>co', '<cmd>lua vim.lsp.buf.code_action({filter = function(action) return action.kind and action.kind:match("source%.organizeImports") end, apply = true})<CR>', { noremap = true, silent = true, desc = "Organize imports" })
+
+-- Theme switching keymaps
+local theme_manager = require("config.theme-manager")
+
+-- <leader>tt = toggle between dark/light mode
+vim.keymap.set("n", "<leader>tt", theme_manager.toggle_theme_mode, { desc = "Toggle dark/light theme" })
+
+-- <leader>tc = cycle through themes in current mode
+vim.keymap.set("n", "<leader>tc", theme_manager.cycle_theme, { desc = "Cycle themes" })
+
+-- <leader>tp = open theme picker
+vim.keymap.set("n", "<leader>tp", theme_manager.show_theme_picker, { desc = "Pick theme" })
+
+-- <leader>ts = sync with system theme
+vim.keymap.set("n", "<leader>ts", theme_manager.sync_with_system, { desc = "Sync with system theme" })
