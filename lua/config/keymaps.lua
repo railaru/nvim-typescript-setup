@@ -35,3 +35,34 @@ vim.keymap.set("n", "<leader>tp", theme_manager.show_theme_picker, { desc = "Pic
 
 -- <leader>ts = sync with system theme
 vim.keymap.set("n", "<leader>ts", theme_manager.sync_with_system, { desc = "Sync with system theme" })
+
+-- LSP rename functionality
+-- <leader>rn = rename symbol under cursor
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
+
+-- Visual mode rename - rename selected text
+vim.keymap.set("v", "<leader>rn", function()
+  -- Get the selected text
+  local start_pos = vim.fn.getpos("'<")
+  local end_pos = vim.fn.getpos("'>")
+  local lines = vim.fn.getline(start_pos[2], end_pos[2])
+  
+  if #lines == 0 then return end
+  
+  -- Handle single line selection
+  if #lines == 1 then
+    lines[1] = string.sub(lines[1], start_pos[3], end_pos[3])
+  else
+    -- Handle multi-line selection
+    lines[1] = string.sub(lines[1], start_pos[3])
+    lines[#lines] = string.sub(lines[#lines], 1, end_pos[3])
+  end
+  
+  local selected_text = table.concat(lines, "\n")
+  
+  -- Exit visual mode
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
+  
+  -- Trigger rename with the selected text as default
+  vim.lsp.buf.rename(selected_text)
+end, { desc = "Rename selected symbol" })
