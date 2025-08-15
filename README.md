@@ -11,6 +11,7 @@
 - Eslint
 - Fuzzy search (Telescope)
 - File tree
+- Git diff and merge conflict resolution (DiffView)
 
 ## Getting started
 
@@ -134,6 +135,36 @@ You can combine commands. For example:
 ## Custom keymaps
 
 - `shift` + `f` find files using the Telescope plugin. Similar to the double shift in JetBrains IDEs.
+
+## Git Integration (DiffView)
+
+### DiffView Commands
+
+- `<leader>gd` - Open DiffView to see current changes
+- `<leader>gc` - Close DiffView
+- `<leader>gh` - Open DiffView file history
+- `<leader>gm` - Open DiffView for merge conflicts
+- `<leader>gr` - Refresh DiffView
+
+### Merge Conflict Resolution
+
+When in merge conflict resolution mode:
+
+- `[x` / `]x` - Navigate between conflicts
+- `<leader>co` - Choose OURS version of conflict
+- `<leader>ct` - Choose THEIRS version of conflict
+- `<leader>cb` - Choose BASE version of conflict
+- `<leader>ca` - Choose ALL versions of conflict
+- `<leader>cO` - Choose OURS for entire file
+- `<leader>cT` - Choose THEIRS for entire file
+- `dx` - Delete the conflict region
+
+### DiffView Navigation
+
+- `<tab>` / `<s-tab>` - Navigate between files in diff
+- `gf` - Open file in previous tab
+- `<C-w>gf` - Open file in new tab
+- `<leader>e` - Toggle file panel
 
 ## Neovim file Tree
 
