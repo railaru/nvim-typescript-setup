@@ -36,6 +36,16 @@ vim.keymap.set("n", "<leader>tp", theme_manager.show_theme_picker, { desc = "Pic
 -- <leader>ts = sync with system theme
 vim.keymap.set("n", "<leader>ts", theme_manager.sync_with_system, { desc = "Sync with system theme" })
 
+-- Git history keymaps
+-- <leader>gf = git file history for current file
+vim.keymap.set("n", "<leader>gf", "<cmd>DiffviewFileHistory %<cr>", { desc = "Current file git history" })
+
+-- <leader>gl = git log (fugitive)
+vim.keymap.set("n", "<leader>gl", "<cmd>Git log --oneline<cr>", { desc = "Git log" })
+
+-- <leader>gb = git blame for current file
+vim.keymap.set("n", "<leader>gb", "<cmd>Git blame<cr>", { desc = "Git blame" })
+
 -- LSP rename functionality
 -- <leader>rn = rename symbol under cursor
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })

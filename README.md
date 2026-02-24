@@ -11,6 +11,7 @@
 - Eslint
 - Fuzzy search (Telescope)
 - File tree
+- Git diff and merge conflict resolution (DiffView)
 
 ## Getting started
 
@@ -134,6 +135,85 @@ You can combine commands. For example:
 ## Custom keymaps
 
 - `shift` + `f` find files using the Telescope plugin. Similar to the double shift in JetBrains IDEs.
+
+## Git Integration (DiffView)
+
+### Opening and Closing
+
+| Keymap | Description |
+| --- | --- |
+| `<leader>gd` | Open DiffView (compare against current index) |
+| `<leader>gc` | Close DiffView |
+| `<leader>gh` | File history (current file from `git-client.lua`) / branch history (from `diffview.lua`) |
+| `<leader>gH` | File history for the entire branch |
+| `<leader>gm` | Open DiffView for last commit (`HEAD~1`) |
+| `<leader>gr` | Refresh DiffView |
+
+You can also use commands directly:
+
+- `:DiffviewOpen` - diff against current index
+- `:DiffviewOpen HEAD~2` - diff against 2 commits ago
+- `:DiffviewOpen d4a7b0d..519b30e` - diff between two commits
+- `:DiffviewOpen origin/main...HEAD` - diff current branch against main
+- `:DiffviewFileHistory %` - file history for current file
+- `:DiffviewFileHistory` - file history for the branch
+- `:DiffviewClose` - close the diff view
+
+### Navigating the Diff View
+
+| Keymap | Description |
+| --- | --- |
+| `<tab>` / `<s-tab>` | Cycle to next / previous file |
+| `j` / `k` | Move cursor between file entries (file panel) |
+| `<cr>` or `o` or `l` | Open diff for selected entry |
+| `gf` | Open file in previous tabpage |
+| `<C-w><C-f>` | Open file in a new split |
+| `<C-w>gf` | Open file in a new tabpage |
+| `<leader>e` | Focus / toggle file panel |
+| `<leader>b` | Toggle file panel |
+| `g<C-x>` | Cycle through available layouts |
+| `<c-b>` / `<c-f>` | Scroll the view up / down |
+| `[c` / `]c` | Jump between diff hunks (built-in vim) |
+
+### File Panel Actions
+
+| Keymap | Description |
+| --- | --- |
+| `-` or `s` | Stage / unstage the selected entry |
+| `S` | Stage all entries |
+| `U` | Unstage all entries |
+| `X` | Restore entry to the state on the left side |
+| `L` | Open the commit log panel |
+| `R` | Refresh the file list |
+| `i` | Toggle between list and tree views |
+| `f` | Flatten empty subdirectories |
+| `zo` / `zc` / `za` | Open / close / toggle fold |
+| `zR` / `zM` | Expand / collapse all folds |
+
+### Merge Conflict Resolution
+
+When resolving merge conflicts, DiffView opens a 3-way diff by default. Use these keymaps:
+
+| Keymap | Description |
+| --- | --- |
+| `[x` / `]x` | Jump to previous / next conflict |
+| `<leader>co` | Choose the OURS version of a conflict |
+| `<leader>ct` | Choose the THEIRS version of a conflict |
+| `<leader>cb` | Choose the BASE version of a conflict |
+| `<leader>ca` | Choose ALL versions of a conflict |
+| `dx` | Delete the conflict region |
+| `<leader>cO` | Choose OURS for the whole file |
+| `<leader>cT` | Choose THEIRS for the whole file |
+
+### File History Panel
+
+| Keymap | Description |
+| --- | --- |
+| `g!` | Open the option panel |
+| `<C-A-d>` | Open entry in a full diffview |
+| `y` | Copy the commit hash |
+| `L` | Show commit details |
+| `g?` | Open the help panel |
 
 ## Neovim file Tree
 
