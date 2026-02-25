@@ -46,6 +46,9 @@ vim.keymap.set("n", "<leader>gl", "<cmd>Git log --oneline<cr>", { desc = "Git lo
 -- <leader>gb = git blame for current file
 vim.keymap.set("n", "<leader>gb", "<cmd>Git blame<cr>", { desc = "Git blame" })
 
+-- Find references in Trouble panel (persistent list, like WebStorm's "Find Usages" tool window)
+vim.keymap.set("n", "<leader>lR", "<cmd>Trouble lsp_references<CR>", { desc = "Find references (Trouble panel)" })
+
 -- LSP rename functionality
 -- <leader>rn = rename symbol under cursor
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })

@@ -215,6 +215,57 @@ When resolving merge conflicts, DiffView opens a 3-way diff by default. Use thes
 | `L` | Show commit details |
 | `g?` | Open the help panel |
 
+## TypeScript: Select Functions/Interfaces & Find References
+
+WebStorm-style "Find Usages" and symbol selection for TypeScript (and JavaScript). Powered by LSP + Treesitter + Telescope.
+
+### Find References / Usages
+
+All LSP navigation keymaps live under `<leader>l` to avoid conflicts with git keymaps.
+
+| Keymap | Description |
+| --- | --- |
+| `<leader>lr` | Find all references to the symbol under cursor (Telescope picker) |
+| `<leader>ld` | Go to definition (Telescope picker) |
+| `<leader>ly` | Go to type definition |
+| `<leader>li` | Go to implementation |
+| `<leader>lR` | Find references in Trouble panel (persistent side panel) |
+| `<leader>ls` | List all symbols in current file (functions, interfaces, types, etc.) |
+| `<leader>lS` | Search symbols across the entire workspace |
+
+**Workflow (similar to WebStorm):**
+1. Place your cursor on a function name, interface, type, or variable.
+2. Press `<leader>lr` to see all references across your project in a Telescope picker.
+3. Or press `<leader>lR` to open them in a persistent Trouble panel you can keep open while editing.
+
+**Troubleshooting:** If you get `No LSP References found`, the TypeScript language server may still be indexing. Wait a few seconds after opening a file and try again. You can verify the LSP is attached by running `:LspInfo`.
+
+### Select Functions & Interfaces (Treesitter Text Objects)
+
+Use these in **visual mode** (`v`) or with operators (`d`, `y`, `c`):
+
+| Keymap | Description |
+| --- | --- |
+| `vaf` | Select entire function (including signature) |
+| `vif` | Select function body |
+| `vac` | Select entire class/interface/type |
+| `vic` | Select class/interface/type body |
+| `vaa` | Select parameter (including type annotation) |
+| `via` | Select parameter value |
+
+These also work with `d` (delete), `y` (yank), `c` (change). For example: `daf` deletes an entire function, `yac` yanks an entire interface.
+
+### Jump Between Functions & Interfaces
+
+| Keymap | Description |
+| --- | --- |
+| `]f` | Jump to next function |
+| `[f` | Jump to previous function |
+| `]c` | Jump to next class/interface |
+| `[c` | Jump to previous class/interface |
+| `]F` / `[F` | Jump to next/previous function end |
+| `]C` / `[C` | Jump to next/previous class/interface end |
+
 ## Neovim file Tree
 
 - `up`, `down` navigate between files.
