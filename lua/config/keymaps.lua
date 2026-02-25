@@ -49,33 +49,5 @@ vim.keymap.set("n", "<leader>gb", "<cmd>Git blame<cr>", { desc = "Git blame" })
 -- Find references in Trouble panel (persistent list, like WebStorm's "Find Usages" tool window)
 vim.keymap.set("n", "<leader>lR", "<cmd>Trouble lsp_references<CR>", { desc = "Find references (Trouble panel)" })
 
--- LSP rename functionality
--- <leader>rn = rename symbol under cursor
-vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
-
--- Visual mode rename - rename selected text
-vim.keymap.set("v", "<leader>rn", function()
-  -- Get the selected text
-  local start_pos = vim.fn.getpos("'<")
-  local end_pos = vim.fn.getpos("'>")
-  local lines = vim.fn.getline(start_pos[2], end_pos[2])
-  
-  if #lines == 0 then return end
-  
-  -- Handle single line selection
-  if #lines == 1 then
-    lines[1] = string.sub(lines[1], start_pos[3], end_pos[3])
-  else
-    -- Handle multi-line selection
-    lines[1] = string.sub(lines[1], start_pos[3])
-    lines[#lines] = string.sub(lines[#lines], 1, end_pos[3])
-  end
-  
-  local selected_text = table.concat(lines, "\n")
-  
-  -- Exit visual mode
-  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
-  
-  -- Trigger rename with the selected text as default
-  vim.lsp.buf.rename(selected_text)
-end, { desc = "Rename selected symbol" })
+-- LSP rename functionality (handled by inc-rename.nvim in lua/plugins/ts-references.lua)
+-- <leader>rn = rename symbol under cursor with live inline preview

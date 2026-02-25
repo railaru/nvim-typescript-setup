@@ -240,6 +240,20 @@ All LSP navigation keymaps live under `<leader>l` to avoid conflicts with git ke
 
 **Troubleshooting:** If you get `No LSP References found`, the TypeScript language server may still be indexing. Wait a few seconds after opening a file and try again. You can verify the LSP is attached by running `:LspInfo`.
 
+### Rename Symbol (Live Preview)
+
+Rename a function, interface, variable, or type across your entire project with a live inline preview of every change (powered by `inc-rename.nvim`).
+
+| Keymap | Description |
+| --- | --- |
+| `<leader>rn` | Rename symbol under cursor with live preview |
+
+**How it works:**
+1. Place your cursor on any symbol (function name, interface, variable, etc.).
+2. Press `<leader>rn` -- a command prompt appears pre-filled with the current name.
+3. As you type the new name, every reference across all open buffers highlights inline in real-time.
+4. Press `Enter` to apply or `Esc` to cancel.
+
 ### Select Functions & Interfaces (Treesitter Text Objects)
 
 Use these in **visual mode** (`v`) or with operators (`d`, `y`, `c`):

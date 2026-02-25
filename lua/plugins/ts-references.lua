@@ -55,6 +55,25 @@ return {
     end,
   },
 
+  -- Live rename with inline preview across all references
+  {
+    "smjonas/inc-rename.nvim",
+    cmd = "IncRename",
+    opts = {
+      input_buffer_type = "dressing",
+    },
+    keys = {
+      {
+        "<leader>rn",
+        function()
+          return ":IncRename " .. vim.fn.expand("<cword>")
+        end,
+        expr = true,
+        desc = "Rename symbol (live preview)",
+      },
+    },
+  },
+
   -- Telescope for displaying LSP references in a nice picker UI
   -- All under <leader>l to avoid conflicts with git keymaps
   {
