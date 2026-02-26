@@ -5,6 +5,7 @@ return {
   { "catppuccin/nvim", name = "catppuccin" },
   
   -- Light themes
+  { "projekt0n/github-nvim-theme" },
   { "sainnhe/everforest" },
   { "rebelot/kanagawa.nvim" },
   
@@ -32,6 +33,7 @@ return {
             "catppuccin-mocha"
           },
           light = {
+            "github_light_default",
             "tokyonight-day",
             "everforest",
             "catppuccin-latte"

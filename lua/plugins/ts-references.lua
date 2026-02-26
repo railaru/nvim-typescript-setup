@@ -1,4 +1,11 @@
 return {
+  -- MDX syntax highlighting via treesitter
+  {
+    "davidmh/mdx.nvim",
+    config = true,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+  },
+
   -- Treesitter text objects for selecting functions, classes, interfaces, etc.
   {
     "nvim-treesitter/nvim-treesitter-textobjects",

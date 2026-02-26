@@ -8,6 +8,7 @@ M.themes = {
     { name = "catppuccin-mocha", display = "Catppuccin Mocha" },
   },
   light = {
+    { name = "github_light_default", display = "GitHub Light" },
     { name = "tokyonight-day", display = "Tokyo Night Day" },
     { name = "everforest", display = "Everforest Light" },
     { name = "catppuccin-latte", display = "Catppuccin Latte" },
