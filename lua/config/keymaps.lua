@@ -21,6 +21,17 @@ vim.api.nvim_set_keymap('n', '<S-K>', '<cmd>lua vim.lsp.buf.hover()<CR>', { nore
 vim.api.nvim_set_keymap('n', '<leader>ci', '<cmd>lua vim.lsp.buf.code_action({filter = function(action) return action.kind and action.kind:match("source%.addMissingImports") end, apply = true})<CR>', { noremap = true, silent = true, desc = "Add missing imports" })
 vim.api.nvim_set_keymap('n', '<leader>co', '<cmd>lua vim.lsp.buf.code_action({filter = function(action) return action.kind and action.kind:match("source%.organizeImports") end, apply = true})<CR>', { noremap = true, silent = true, desc = "Organize imports" })
 
+-- Import symbol under cursor (shows import source picker if multiple options)
+-- Place cursor on any unimported symbol and press <leader>cI to add its import
+vim.keymap.set('n', '<leader>cI', function()
+  vim.lsp.buf.code_action({
+    filter = function(action)
+      local title = (action.title or ""):lower()
+      return title:match("import") or title:match("add all missing")
+    end,
+  })
+end, { desc = "Import symbol under cursor" })
+
 -- Theme switching keymaps
 local theme_manager = require("config.theme-manager")
 

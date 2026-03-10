@@ -136,6 +136,25 @@ You can combine commands. For example:
 
 - `shift` + `f` find files using the Telescope plugin. Similar to the double shift in JetBrains IDEs.
 
+### TypeScript Imports
+
+Auto-imports work in two ways:
+
+1. **While typing** -- accept a completion with `Enter` and the import gets added automatically.
+2. **On existing code** -- cursor on an unimported symbol, use one of the keymaps below.
+
+| Keymap | Description |
+| --- | --- |
+| `<leader>cI` | Import the symbol under cursor. Shows a picker if there are multiple sources. |
+| `<leader>ci` | Add all missing imports in the file at once (no picker, just does it). |
+| `<leader>co` | Organize imports (sorts and removes unused). |
+
+**Typical workflow:**
+1. Write or paste some code that uses `useState`, `useRouter`, etc. without imports.
+2. Put your cursor on the function name.
+3. `<leader>cI` -- pick where to import from if needed.
+4. Or just `<leader>ci` to let tsserver figure out all missing imports at once.
+
 ## Git Integration (DiffView)
 
 ### Opening and Closing
